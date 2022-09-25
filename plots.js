@@ -55,9 +55,16 @@ d3.json(bbb_url).then(function(data)
             type: "indicator",
             mode: "gauge+number",
             gauge: {
-                axis: { range: [0, 9],
-                        dtick: 1,
-                        tick0: 0 },
+                shape: "angular",
+                bar: {
+                    color: "black"
+                },
+                axis: { 
+                    range: [0, 9],
+                    dtick: 1,
+                    tick0: 0,
+                    showticklabels: true,
+                    showtickprefix: "all" },
                 steps: [
                     { range: [0, 1], color: "#ffffff" },
                     { range: [1, 2], color: "#ccffdd" },
@@ -95,6 +102,7 @@ d3.json(bbb_url).then(function(data)
                 t: 25,
                 b: 25}};
         let gauge_layout = {
+            title: "Belly Button Washing Frequency",
             margin: {
                 l: 25,
                 r: 25,
