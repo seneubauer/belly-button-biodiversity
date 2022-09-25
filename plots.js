@@ -53,17 +53,21 @@ d3.json(bbb_url).then(function(data)
             domain: { x: [0, 1], y: [0, 1]},
             value: data_metadata.filter(x => x.id == initial_dataset.id)[0].wfreq,
             type: "indicator",
-            mode: "gauge+number+delta",
-            delta: { reference: 1 },
+            mode: "gauge+number",
             gauge: {
-                axis: { range: [null, 9] },
+                axis: { range: [0, 9],
+                        dtick: 1,
+                        tick0: 0 },
                 steps: [
-                    { range: [0, 4.5], color: "lightgray" },
-                    { range: [4.5, 0], color: "gray" }],
-                threshold: {
-                    line: { color: "red", width: 4 },
-                    thickness: 0.75,
-                    value: 8.9}}};
+                    { range: [0, 1], color: "#ffffff" },
+                    { range: [1, 2], color: "#ccffdd" },
+                    { range: [2, 3], color: "#99ffbb" },
+                    { range: [3, 4], color: "#66ff99" },
+                    { range: [4, 5], color: "#33ff77" },
+                    { range: [5, 6], color: "#00ff55" },
+                    { range: [6, 7], color: "#00cc44" },
+                    { range: [7, 8], color: "#009933" },
+                    { range: [8, 9], color: "#006622" }]}};
 
         // define the bubble data object
         let bubble_trace = {
