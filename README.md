@@ -1,5 +1,7 @@
 # belly-button-biodiversity
 
+[Belly Button Biodiversity Dashboard](https://seneubauer.github.io/belly-button-biodiversity/)
+
 ### Goal
 The purpose of this assignment was to show proficiency in using Plotly and d3.js to create and dynamically update a variety of displays. 
 
